@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>New Menu Item</title>
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="{{url_for('static', filename='edit.css')}}">
+	</head>
+	<body>
+		<div class="container">
+		<h1>Edit Menu Item</h1>
+		<form method="POST" action="/restaurant/{{restaurant_id}}/menu/{{menu_id}}/edit">
+			<h3>Name:</h3>
+			<br>
+			<input type="text" size="30" name="name" placeholder="{{item.name}}">
+			<br>
+			<h3>Description:</h3>
+			<br>
+			<input type="text" size="30" name="description" placeholder="{{item.description}}">
+			<br>
+			<h3>Price:</h3>
+			<br>
+			<input type="text" size="30" name="price" placeholder="{{item.price}}">
+			<br>
+			<h3>Course:</h3>
+			<br>
+			{% if item.course == "Appetizer" %}
+				<input type="radio" name="course" value="Appetizer" checked="checked">Appetizer
+			{% else %}
+				<input type="radio" name="course" value="Appetizer">Appetizer
+			{% endif %}
+			<br>
+			{% if item.course == "Entree" %}
+				<input type="radio" name="course" value="Entree" checked="checked">Entree
+			{% else %}
+				<input type="radio" name="course" value="Entree">Entree
+			{% endif %}
+			<br>
+			{% if item.course == "Dessert" %}
+				<input type="radio" name="course" value="Dessert" checked="checked">Dessert
+			{% else %}
+				<input type="radio" name="course" value="Dessert">Dessert
+			{% endif %}
+			<br>
+			{% if item.course == "Beverage" %}
+				<input type="radio" name="course" value="Beverage" checked="checked">Beverage
+			{% else %}
+				<input type="radio" name="course" value="Beverage">Beverage
+			{% endif %}
+			<br>
+			<input type="submit" value="Edit">
+			<a href="{{url_for('showMenu', restaurant_id = restaurant_id)}}">Cancel</a>
+		</form>
+		</div>
+	</body>
+</html>

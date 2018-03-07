@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Delete Restaurant</title>
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="{{url_for('static', filename='edit.css')}}">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Are you sure you want to delete {{restaurant.name}}?</h1>
+			<form method="POST" action="/restaurant/{{restaurant.id}}/delete">
+				<input type="submit" value="Delete">
+				<a href="{{url_for('showRestaurants')}}">Cancel</a>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Restaurants</title>
+		<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+	</head>
+	<body>
+		<div class="header">
+			<h1>Restaurants</h1>
+		</div>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+			<li><strong>{{message}}</strong></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+		{% if restaurants %}
+			{% for restaurant in restaurants %}
+			<div class="restaurant">
+				<h2>{{restaurant.name}}</h2>
+				<a href="{{url_for('editRestaurant', restaurant_id = restaurant.id)}}">Edit</a>
+				<a href="{{url_for('deleteRestaurant', restaurant_id = restaurant.id)}}">Delete</a>
+			</div>
+			{% endfor %}
+		{% else %}
+			<div class="error">You currently have no restaurants.</div>
+		{% endif %}
+		<br>
+		<div class="new">
+			<a href="{{url_for('newRestaurant')}}">Make A New Restaurant</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.header {
+	background-image: url("https://centomadison.com/wp-content/uploads/2017/07/Cento_slider_image.jpg");
+	height: 400px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #fff;
+	font-family: "Covered By Your Grace", sans-serif;
+	font-size: 120px;
+	text-align: left;
+	margin: 0;
+	padding-top: 50px;
+}
+
+h2 {
+	color: #b20000;
+	font-family: "Raleway", sans-serif;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+
+h3 {
+    color: #14213D;
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+}
+
+h4 {
+    color: #b20000;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+}
+
+p {
+    color: #333;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+}
+
+li {
+    border-bottom: 1px solid #9ACD32;
+    list-style: none;
+    margin: 20px 0px;
+    padding-bottom: 10px;
+}
+
+.restaurant {
+	margin: 5px 300px;
+	padding: 10px;
+	position: relative;
+	border-bottom: 0.5px solid #b20000;
+}
+
+a {
+	color: #000;
+	font-weight: bold;
+	font-family: "Raleway", sans-serif;
+	font-size: 1em;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+.new {
+	color: #fff;
+	margin: 1px 300px;
+	padding: 20px;
+	background-color: #b20000;
+	font-size: 1.2em;
+	border-radius: 5px;
+	width: 30%;
+}
+
+.error {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #556B2F;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 76px;
+    margin: 100px 0 100px 0;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(34,62,66,.75);
+}
